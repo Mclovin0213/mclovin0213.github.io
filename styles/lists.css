@@ -1,0 +1,44 @@
+.list_card_container {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 2em;
+
+}
+
+
+.list_card {
+    display: grid;
+    max-width: 60em;
+
+    grid-template-columns: 1fr 2fr;
+
+
+    /* border: 1px solid black */
+}
+
+.list_image_container {
+    grid-column: 1;
+
+    justify-self: left;
+
+
+    width: 27vw;
+    height: 27vh;
+
+    /* border: 1px solid greenyellow */
+}
+
+.list_details_container {
+    flex-direction: row;
+    text-align: left;
+
+    height: 100%;
+    /* border: 2px solid orchid; */
+}
+
+.list_title {
+    font-size: 30px;
+    margin: 0;
+
+    /* border: 1px solid red; */
+}

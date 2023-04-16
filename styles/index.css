@@ -1,3 +1,8 @@
+/* header {
+    display: flex;
+    border: 1px solid red;
+} */
+
 body {
     margin: 0px;
     padding: 0%;
@@ -68,46 +73,56 @@ img {
     color: #000000;
 }
 
+.title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
 .content_container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     margin: 0 50px 0;
     padding: 0px;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Fraunces', serif;
+    letter-spacing: 0.2em;
 
     position: relative;
     width: 1fr;
     top: 156px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .large_review_card {
     display: grid;
 
     grid-template-columns: 1fr 2fr;
-    height: 425px;
-
+    height: 26em;
+    max-width: 75em;
+    min-width: 30em;
+    align-items: center;
     background-color: #E4DCCF;
-    border: 2px solid #000000;
-    border-radius: 10px;
+    /* border: 2px solid #000000; */
+    border-radius: 5px;
 }
 
 .large_rating_container {
     display: flex;
     grid-column: 1;
-    margin: 20px;
-    margin-top: 30px;
-    border: 1px solid red;
+    position: relative;
+    left: 1em;
+    height: 100%;
+    /* border: 1px solid red; */
 }
 
-.large_film_title {
+.large_title {
     position: relative;
-    top: -10px;
-    font-weight: 900;
-    font-size: 30px;
+    top: -20px;
+    font-size: 40px;
     text-align: center;
+    font-weight: 700;
 }
 
 .large_film_image {
@@ -115,12 +130,13 @@ img {
     justify-self: center;
     align-self: center;
 
-    width: 95vh;
+    width: 53vw;
     height: 47.5vh;
+    border: 1px solid green;
 }
 
 .large_film_image img {
-    border-radius: 2%;
+    border-radius: 1%;
 }
 
 .reviews_container {
