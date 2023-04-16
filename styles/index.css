@@ -1,3 +1,9 @@
+:root {
+    --star-size: 35px;
+    --star-color: #F9F5EB;
+    --star-background: #002B5B;
+  }
+
 /* header {
     display: flex;
     border: 1px solid red;
@@ -132,7 +138,7 @@ img {
 
     width: 53vw;
     height: 47.5vh;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .large_film_image img {
@@ -144,18 +150,38 @@ img {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     width: 1fr;
+    gap: 3em;
 }
 
 .film_card {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    /* border: 1px solid greenyellow */
+    row-gap: 1em;
 }
 
 .film_card p {
     text-align: center;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 30px;
 }
+
+.star_rating {
+    font-size: var(--star-size);
+    font-family: Times;
+    line-height: 1;
+    /* border: 1px solid red; */
+}
+  
+.star_rating::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) calc(var(--rating) / 5 * 100%), var(--star-color) calc(var(--rating) / 5 * 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
 
 .poster_container {
     width: 200px;
