@@ -47,20 +47,40 @@ document.addEventListener('DOMContentLoaded', () => {
         imageLink.href = filmCards[currentCardIndex].ref;
       }
   
-    leftButton.addEventListener('click', () => {
-      currentCardIndex--;
-      if (currentCardIndex < 0) {
-        currentCardIndex = filmCards.length - 1;
+      let carouselInterval;
+
+      function autoChangeCarousel() {
+        currentCardIndex++;
+        if (currentCardIndex >= filmCards.length) {
+          currentCardIndex = 0;
+        }
+        updateCarousel();
       }
-      updateCarousel();
-    });
-  
-    rightButton.addEventListener('click', () => {
-      currentCardIndex++;
-      if (currentCardIndex >= filmCards.length) {
-        currentCardIndex = 0;
+
+      function resetCarouselInterval() {
+        clearInterval(carouselInterval);
+        carouselInterval = setInterval(autoChangeCarousel, 15000);
       }
-      updateCarousel();
-    });
+      
+      leftButton.addEventListener('click', () => {
+        currentCardIndex--;
+        if (currentCardIndex < 0) {
+          currentCardIndex = filmCards.length - 1;
+        }
+        updateCarousel();
+        resetCarouselInterval();
+      });
+      
+      rightButton.addEventListener('click', () => {
+        currentCardIndex++;
+        if (currentCardIndex >= filmCards.length) {
+          currentCardIndex = 0;
+        }
+        updateCarousel();
+        resetCarouselInterval();
+      });
+      
+      carouselInterval = setInterval(autoChangeCarousel, 15000);
+      
   });
   

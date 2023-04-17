@@ -252,3 +252,8 @@ button {
 .large_card_quote p {
     font-size: 17px;
 }
+
+.carousel_item {
+    transition: transform 0.5s ease-out;
+}
+  

@@ -25,10 +25,18 @@
     width: 27vw;
     height: 27vh;
 
-    /* border: 1px solid greenyellow */
 }
 
+.list_image_container img {
+    /* border: 2px solid black; */
+}
+
+
+
 .list_details_container {
+    position: relative;
+    left: 1em;
+
     flex-direction: row;
     text-align: left;
 
