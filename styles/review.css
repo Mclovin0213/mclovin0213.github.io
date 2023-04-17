@@ -1,0 +1,13 @@
+.summary {
+    justify-self: first baseline;
+    align-self: center;
+    width: 45em;
+    /* border: 1px solid red; */
+}
+
+.summary p {
+    line-height: 180%;
+    font-size: 18px;
+    text-align: start;
+    
+}

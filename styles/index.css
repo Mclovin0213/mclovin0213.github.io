@@ -15,6 +15,11 @@ body {
     background-color: #F9F5EB;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 h1 {
     position: absolute;
     width: 822px;
@@ -22,7 +27,7 @@ h1 {
     left: 43px;
     top: -20px;
     
-    font-family: 'Tonight';
+    font-family: 'Tonight', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 80px;
@@ -33,7 +38,6 @@ h1 {
 }
 
 h1 a {
-    text-decoration: none;
     color: #EA5455;
 }
 
@@ -94,8 +98,8 @@ button {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 50px 0;
     padding: 0px;
+    padding-bottom: 3em;
 
     font-family: 'Fraunces', serif;
     letter-spacing: 0.2em;
@@ -114,9 +118,10 @@ button {
 
     grid-template-columns: 1fr 2fr;
     height: 26em;
-    max-width: 75em;
+    width: 75em;
     min-width: 30em;
     align-items: center;
+    justify-items: center;
     background-color: #E4DCCF;
     /* border: 2px solid #000000; */
     border-radius: 5px;
@@ -126,8 +131,10 @@ button {
     display: flex;
     grid-column: 1;
     position: relative;
+    flex-direction: column;
     left: 1em;
     height: 100%;
+
     /* border: 1px solid red; */
 }
 
@@ -137,6 +144,11 @@ button {
     font-size: 40px;
     text-align: center;
     font-weight: 700;
+}
+
+.large_title a {
+    text-decoration: none;
+    color: black;
 }
 
 .large_film_image {
@@ -222,4 +234,21 @@ button {
 .right_button {
     grid-column: 2;
     justify-self: right;
+}
+
+.large_card_quote {
+    position: relative;
+    bottom: 1em;
+
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    
+    max-width: 22em;
+
+    /* border: 1px solid red */
+}
+
+.large_card_quote p {
+    font-size: 17px;
 }
