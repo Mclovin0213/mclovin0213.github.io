@@ -39,6 +39,10 @@
 .list_title {
     font-size: 30px;
     margin: 0;
-
     /* border: 1px solid red; */
+}
+
+.list_title a {
+    text-decoration: none;
+    color: black;
 }
